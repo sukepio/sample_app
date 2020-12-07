@@ -1,3 +1,15 @@
 // Place all the styles related to the todolists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// flash css
+.flash {
+  width: 880px;
+  margin: 10px auto;
+  padding: 15px;
+  text-align: center;
+  background-color: lightpink;
+  border: solid .7 #000;
+  opacity: .6;
+  border-radius: 3px;
+}
