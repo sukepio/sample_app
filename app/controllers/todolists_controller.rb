@@ -15,7 +15,7 @@ class TodolistsController < ApplicationController
   end
   
   def index
-    @lists = List.all
+    @lists = List.all.order(created_at: :desc)
   end
   
   def show
