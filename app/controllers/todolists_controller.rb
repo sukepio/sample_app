@@ -16,6 +16,8 @@ class TodolistsController < ApplicationController
     else
       render("todolists/new")
     end
+
+    
   end
   
   def index
@@ -32,8 +34,12 @@ class TodolistsController < ApplicationController
   
   def update
     @list = List.find(params[:id])
-    @list.update(list_params)
-    redirect_to todolist_path(list.id)
+    if @list.update(list_params)
+      flash[:notice] = "投稿を編集しました"
+      redirect_to todolist_path(@list.id)
+    else
+      render("todolists/edit")
+    end
   end
   
   def destroy
